@@ -34,19 +34,18 @@ return require('packer').startup(function()
 	-- Load spicy gruvbox color theme
 	use 'gruvbox-community/gruvbox'
 
-	-- Treesitter is life
+	-- treesitter
 	use {
 		'nvim-treesitter/nvim-treesitter',
 		run = ':TSUpdate'
 	}
 
-	-- Gaze deeply into the unknown
+	-- telescope
 	use {
 		'nvim-telescope/telescope.nvim',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 
-	-- Use fzf native for telescope
 	use {
 		'nvim-telescope/telescope-fzf-native.nvim',
 		run = 'make'
@@ -61,17 +60,15 @@ return require('packer').startup(function()
 		config = function() require'nvim-tree'.setup {} end
 	}
 
-	-- Git stuff
 	use 'airblade/vim-gitgutter'
 
-	-- comment stuff out
 	use 'preservim/nerdcommenter'
 
-	-- Time Pope is a god
+	-- more plugins for git and brackets
 	use 'tpope/vim-surround'
 	use 'tpope/vim-fugitive'
 
-	-- Yanking manager (yeah yeah I know, registers exist)
+	-- Yanking manager
 	use {
 		"AckslD/nvim-neoclip.lua",
 		requires = { {'nvim-telescope/telescope.nvim'} },
@@ -102,6 +99,9 @@ return require('packer').startup(function()
 	-- Typescript. Oh Typescript. Where art thou Typescript.
 	use 'jose-elias-alvarez/null-ls.nvim'
 	use 'jose-elias-alvarez/nvim-lsp-ts-utils'
+
+	-- golang language server
+	use 'ray-x/go.nvim'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

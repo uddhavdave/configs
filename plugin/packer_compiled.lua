@@ -105,6 +105,11 @@ _G.packer_plugins = {
     path = "/Users/uddhavdave/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["go.nvim"] = {
+    loaded = true,
+    path = "/Users/uddhavdave/.local/share/nvim/site/pack/packer/start/go.nvim",
+    url = "https://github.com/ray-x/go.nvim"
+  },
   gruvbox = {
     loaded = true,
     path = "/Users/uddhavdave/.local/share/nvim/site/pack/packer/start/gruvbox",
