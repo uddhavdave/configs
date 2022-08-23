@@ -99,6 +99,19 @@ return require('packer').startup(function()
 	-- Typescript. Oh Typescript. Where art thou Typescript.
 	use 'jose-elias-alvarez/null-ls.nvim'
 	use 'jose-elias-alvarez/nvim-lsp-ts-utils'
+	
+	-- trouble for showing diagnostics at one place
+	use {
+		"folke/trouble.nvim",
+		requires = "kyazdani42/nvim-web-devicons",
+		config = function()
+			require("trouble").setup {
+			  -- your configuration comes here
+			  -- or leave it empty to use the default settings
+			  -- refer to the configuration section below
+			}
+		end
+	}
 
 	-- golang language server
 	use 'ray-x/go.nvim'
