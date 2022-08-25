@@ -31,8 +31,8 @@ return require('packer').startup(function()
 	use 'L3MON4D3/LuaSnip'
 	use 'saadparwaiz1/cmp_luasnip'
 
-	-- Load spicy gruvbox color theme
-	use 'gruvbox-community/gruvbox'
+	-- Theme should be dark. Always.
+	use 'navarasu/onedark.nvim'
 
 	-- treesitter
 	use {
