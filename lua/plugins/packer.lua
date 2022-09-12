@@ -22,7 +22,7 @@ return require('packer').startup(function()
 	-- Plugin development
 	----------------
 	-- Work in progress. Using upstream by default:
-	use 'jpmcb/nvim-go'
+	-- use 'jpmcb/nvim-go'
 	-- If working locally, comment out above 
 	-- and uncomment below. Replace path with appropriate working local config
 	--use '~/workspace/nvim-go'
@@ -113,6 +113,21 @@ return require('packer').startup(function()
 		end
 	}
 
+	use {
+		"windwp/nvim-ts-autotag",
+		requires = "nvim-treesitter",
+		config = function()
+		require("nvim-ts-autotag").setup { enable = true }
+		end,
+	}
+
+	-- Auto pairs
+	use {
+		"windwp/nvim-autopairs",
+		config = function()
+		require("nvim-autopairs").setup {}
+		end
+	}
 	-- golang language server
 	use 'ray-x/go.nvim'
 
