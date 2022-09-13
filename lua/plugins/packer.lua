@@ -18,15 +18,6 @@ return require('packer').startup(function()
 	use 'hrsh7th/nvim-cmp'
 	use 'williamboman/nvim-lsp-installer'
 
-	----------------
-	-- Plugin development
-	----------------
-	-- Work in progress. Using upstream by default:
-	-- use 'jpmcb/nvim-go'
-	-- If working locally, comment out above 
-	-- and uncomment below. Replace path with appropriate working local config
-	--use '~/workspace/nvim-go'
-
 	-- Luasnip
 	use 'L3MON4D3/LuaSnip'
 	use 'saadparwaiz1/cmp_luasnip'
@@ -49,6 +40,12 @@ return require('packer').startup(function()
 	use {
 		'nvim-telescope/telescope-fzf-native.nvim',
 		run = 'make'
+	}
+
+	-- theme? 
+	use { 
+		"catppuccin/nvim",
+		as = "catppuccin",
 	}
 
 	-- nvim file tree. Alternative to NerdTree
